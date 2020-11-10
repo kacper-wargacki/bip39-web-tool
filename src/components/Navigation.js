@@ -11,7 +11,7 @@ const panelStyles = {
 export default function Navigation() {
   const [expanded, setExpanded] = useState(false);
   return (
-    <div>
+    <div >
       <Icon
         style={{ alignSelf: "center" }}
         icon="arrow-circle-o-right"
@@ -21,13 +21,11 @@ export default function Navigation() {
       />
       <Sidenav
         expanded={expanded}
-        defaultOpenKeys={["1", "2"]}
-        activeKey={"1"}
         appearance={"subtle"}
-        style={{ height: "100vh", position: "absolute" }}
+        style={{ height: "100vh", position: "absolute", maxWidth: "15vw" }}
       >
         <Sidenav.Body>
-          <Nav>
+          <Nav >
             <Nav.Item eventKey="1" icon={<Icon icon="eye" />}>
               <Link to={"/aes-decrypt"}> AES-Decrypt </Link>
             </Nav.Item>
